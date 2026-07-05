@@ -263,7 +263,7 @@ Anda dapat mengubah pintasan ini untuk mengaktifkan fitur lain di Pengaturan &gt
     <string name="activity_resolver_use_once">hanya sekali ini saja</string>
     <string name="activity_resolver_work_profiles_support">%1$s tidak mendukung profil kerja</string>
     <string name="activitychooserview_choose_application">Pilih aplikasi</string>
-    <string name="activitychooserview_choose_application_error">Tidak dapat memulai '%s'</string>
+    <string name="activitychooserview_choose_application_error">Tidak dapat memulai "%s"</string>
     <string name="adb_active_notification_message">Klik untuk mematikan USB debugging</string>
     <string name="adb_active_notification_title">Terhubung ke USB debugging</string>
     <string name="adb_debugging_notification_channel_tv">USB debugging</string>
@@ -2210,7 +2210,7 @@ Anda akan menerima pemberitahuan lain ketika koneksi Anda dienkripsi lagi. "</st
     <string name="sms_short_code_details"><b>Hal ini dapat mengakibatkan tagihan ke nomor ponsel Anda.</b></string>
     <string name="sms_short_code_remember_choice">ingat pilihanku</string>
     <string name="sms_short_code_remember_undo_instruction">Anda nanti dapat mengubah pengaturan ini di Pengaturan &gt; Aplikasi</string>
-    <string name="smv_application">Aplikasi '%1$s' (proses %2$s) melanggar kebijakan StrictMode yang diberlakukan sendiri.</string>
+    <string name="smv_application">Aplikasi "%1$s" (proses %2$s) melanggar kebijakan StrictMode yang diberlakukan sendiri.</string>
     <string name="smv_process">Proses %1$s melanggar kebijakan StrictMode yang diberlakukan sendiri.</string>
     <string name="social_notification_channel_label">kontak sosial</string>
     <string name="splash_screen_view_branding_description">Citra merek aplikasi</string>
