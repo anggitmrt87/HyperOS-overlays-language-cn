@@ -1,8 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="android.overlay.framework.res.lang"
     android:versionCode="36"
-    android:versionName="16"
-    coreApp="true">
+    android:versionName="16">
 
     <uses-sdk
         android:minSdkVersion="30"
@@ -10,10 +9,10 @@
 
     <overlay
         android:targetPackage="android"
-        android:priority="9999"
+        android:priority="999"
         android:isStatic="true" />
     
     <application
         android:label="framework-res-lang"
-        android:extractNativeLibs="true" />
+        android:extractNativeLibs="false" />
 </manifest>
