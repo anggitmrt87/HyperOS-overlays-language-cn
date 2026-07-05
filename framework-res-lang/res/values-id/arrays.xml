@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>pribadi</item>
+        <item>Bekerja</item>
+        <item>lainnya</item>
+        <item>Sesuaikan</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>TUJUAN</item>
+        <item>Windows Langsung</item>
+        <item>Yahoo Cina</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Bicara</item>
+        <item>ICQ</item>
+        <item>Mengoceh</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>satuan</item>
+        <item>lainnya</item>
+        <item>Sesuaikan</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>perumahan</item>
+        <item>ponsel</item>
+        <item>satuan</item>
+        <item>Faks satuan</item>
+        <item>Faks Perumahan</item>
+        <item>pager</item>
+        <item>lainnya</item>
+        <item>Sesuaikan</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>perumahan</item>
+        <item>satuan</item>
+        <item>lainnya</item>
+        <item>Sesuaikan</item>
+    </string-array>
+    <array name="face_acquired_vendor" />
+    <array name="face_error_vendor" />
+    <string-array name="fingerprint_acquired_vendor">
+        <item>silakan coba lagi</item>
+        <item />
+        <item />
+        <item>Harap tutupi seluruh area operasi sidik jari dengan jari Anda dan tekan</item>
+        <item />
+        <item>Harap tutupi seluruh area operasi sidik jari dengan jari Anda dan tekan</item>
+        <item>Silakan bersihkan permukaan sidik jari dan coba lagi</item>
+        <item />
+        <item />
+        <item />
+        <item />
+        <item>Harap tutupi seluruh area operasi sidik jari dengan jari Anda dan tekan</item>
+        <item>Harap tutupi seluruh area operasi sidik jari dengan jari Anda dan tekan</item>
+        <item>Jari itu bergerak terlalu cepat dan tidak dapat dikenali</item>
+        <item>Silakan gerakkan posisi jari Anda dan kenali kembali.</item>
+        <item>Silakan angkat jari Anda dan letakkan kembali jari Anda di area pengenalan</item>
+        <item>Harap simpan jari Anda di area pengenalan lebih lama</item>
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item>Silakan gerakkan posisi jari Anda sebelum masuk</item>
+        <item>Sidik jarinya sudah ada. Silakan ubah jari Anda untuk memasukkannya.</item>
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item>Menggeser terlalu cepat, silakan geser jari Anda secara perlahan</item>
+        <item>Tempatkan dan geser jari Anda ke kiri atau ke kanan</item>
+        <item>Silakan bersihkan sensor sidik jari dan coba lagi</item>
+    </string-array>
+    <array name="fingerprint_error_vendor" />
+    <string-array name="imAddressTypes">
+        <item>perumahan</item>
+        <item>Bekerja</item>
+        <item>lainnya</item>
+        <item>Sesuaikan</item>
+    </string-array>
+    <integer-array name="maps_starting_lat_lng">
+        <item>39937795</item>
+        <item>116387224</item>
+    </integer-array>
+    <integer-array name="maps_starting_zoom">
+        <item>2</item>
+    </integer-array>
+    <string-array name="network_switch_type_name">
+        <item>data seluler</item>
+        <item>WLAN</item>
+        <item>Bluetooth</item>
+        <item>Ethernet</item>
+        <item>VPN</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Untuk melakukan panggilan dan pesan melalui Wi-Fi, pertama-tama minta operator Anda untuk mengaktifkannya, lalu aktifkan kembali panggilan Wi-Fi di Setelan (Kode kesalahan: %1$s).</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Masalah saat mendaftarkan panggilan Wi-Fi dengan operator Anda: %1$s</item>
+    </string-array>
+</resources>

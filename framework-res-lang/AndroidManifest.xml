@@ -1,0 +1,19 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="android.overlay.framework.res.lang"
+    android:versionCode="36"
+    android:versionName="16"
+    coreApp="true">
+
+    <uses-sdk
+        android:minSdkVersion="30"
+        android:targetSdkVersion="36" />
+
+    <overlay
+        android:targetPackage="android"
+        android:priority="9999"
+        android:isStatic="true" />
+    
+    <application
+        android:label="framework-res-lang"
+        android:extractNativeLibs="true" />
+</manifest>
