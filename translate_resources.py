@@ -13,7 +13,7 @@ CACHE_FILE = "translation_cache.json"
 LOG_FILE = "translate_pro.log"
 SOURCE_LANG = "auto"          # Deteksi otomatis
 TARGET_LANG = "id"
-OUTPUT_DIR = "values-id"      # Folder tujuan (akan dibuat otomatis)
+OUTPUT_DIR = "values-in"      # Folder tujuan (akan dibuat otomatis)
 # ===============================================
 
 # Setup logging
