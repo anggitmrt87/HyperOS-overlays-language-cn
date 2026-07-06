@@ -20,13 +20,13 @@ else
     makes="$(find "$PWD/.." -name Android.mk)"
 fi
 
-if ! command -v aapt > /dev/null;then
+if ! command -v aapt2 > /dev/null;then
     export LD_LIBRARY_PATH=.
     export PATH=$PATH:.
 fi
 
-if ! command -v aapt > /dev/null; then
-    echo "Please install aapt (apt install aapt)"
+if ! command -v aapt2 > /dev/null; then
+    echo "Please install aapt2 (apt install aapt2)"
     exit 1
 fi
 
@@ -78,7 +78,7 @@ cleanup_values() {
     find "$res_dir/values"* -name "*.xml" -type f -exec sed -i '/@drawable/d' {} \;
 }
 
-build_with_aapt() {
+build_with_aapt2() {
     local name="$1"
     local path="$2"
 
@@ -92,18 +92,24 @@ build_with_aapt() {
 
     cleanup_values "$temp_res"
 
-    aapt package -f -F "${name}-unsigned.apk" \
-        -M "$path/AndroidManifest.xml" \
-        -S "$temp_res" \
+    local compiled_dir="$PWD/compiled_$$"
+    mkdir -p "$compiled_dir"
+
+    echo "Compiling resources with aapt2..."
+    find "$temp_res" -type f -print0 | while IFS= read -r -d '' file; do
+        aapt2 compile -o "$compiled_dir" "$file" || return 1
+    done
+
+    echo "Linking resources with aapt2..."
+    aapt2 link -o "${name}-unsigned.apk" \
         -I android.jar \
-        --auto-add-overlay \
-        --ignore-assets \
-        --skip-symbols-without-default-localization \
-        --error-on-missing-config-entry
+        --manifest "$path/AndroidManifest.xml" \
+        $(find "$compiled_dir" -name "*.flat" -printf "-R %p ") \
+        --auto-add-overlay
 
     local ret=$?
 
-    rm -rf "$temp_android_data" "$temp_res"
+    rm -rf "$temp_android_data" "$temp_res" "$compiled_dir"
     unset ANDROID_DATA
     return $ret
 }
@@ -114,10 +120,10 @@ echo "$makes" | while read -r f; do
 
     path="$(dirname "$f")"
 
-    if build_with_aapt "$name" "$path"; then
-        echo "Successfully built with aapt"
+    if build_with_aapt2 "$name" "$path"; then
+        echo "Successfully built with aapt2"
     else
-        echo "Failed to build $name with aapt"
+        echo "Failed to build $name with aapt2"
         exit 1
     fi
 
