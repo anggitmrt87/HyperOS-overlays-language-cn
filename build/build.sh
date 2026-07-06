@@ -74,8 +74,8 @@ contains() {
 
 cleanup_values() {
     local res_dir="$1"
-    echo "Cleaning @drawable references in values files under $res_dir"
-    find "$res_dir/values"* -name "*.xml" -type f -exec sed -i '/@drawable/d' {} \;
+    echo "Cleaning @ references in values files under $res_dir"
+    find "$res_dir/values"* -name "arrays.xml" -type f -exec sed -i '/@/d' {} \;
 }
 
 build_with_aapt2() {
