@@ -80,8 +80,7 @@ build_with_aapt() {
     mkdir -p "$temp_android_data"
     export ANDROID_DATA="$temp_android_data"
     
-    # Gunakan --auto-add-overlay untuk mengizinkan penambahan resource overlay tanpa <add-resource>
-    aapt package -f -F "${name}-unsigned.apk" -M "$path/AndroidManifest.xml" -S "$path/res" -I android.jar --error-on-missing-config-entry --skip-symbols-without-default-localization
+    aapt package -f -F "${name}-unsigned.apk" -M "$path/AndroidManifest.xml" -S "$path/res" -I android.jar --ignore-assets --skip-symbols-without-default-localization
     local ret=$?
     
     rm -rf "$temp_android_data"
