@@ -11,9 +11,9 @@ from googletrans import Translator as GoogletransAsync
 # ================= KONFIGURASI =================
 CACHE_FILE = "translation_cache.json"
 LOG_FILE = "translate_pro.log"
-SOURCE_LANG = "auto"          # Deteksi otomatis
+SOURCE_LANG = "auto"
 TARGET_LANG = "id"
-OUTPUT_DIR = "values-in"      # Folder tujuan (akan dibuat otomatis)
+OUTPUT_DIR = "values-in-rID"
 # ===============================================
 
 # Setup logging
