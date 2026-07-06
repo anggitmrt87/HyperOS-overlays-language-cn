@@ -105,7 +105,8 @@ build_with_aapt2() {
         -I android.jar \
         --manifest "$path/AndroidManifest.xml" \
         $(find "$compiled_dir" -name "*.flat" -printf "-R %p ") \
-        --auto-add-overlay
+        --auto-add-overlay \
+        --no-resource-removal
 
     local ret=$?
 
