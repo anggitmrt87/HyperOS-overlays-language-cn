@@ -80,7 +80,7 @@ build_with_aapt() {
     mkdir -p "$temp_android_data"
     export ANDROID_DATA="$temp_android_data"
     
-    aapt package -f -F "${name}-unsigned.apk" -M "$path/AndroidManifest.xml" -S "$path/res" -I android.jar
+    aapt package -f -F "${name}-unsigned.apk" -M "$path/AndroidManifest.xml" -S "$path/res" -I android.jar --auto-add-overlay
     local ret=$?
     
     rm -rf "$temp_android_data"
@@ -99,7 +99,7 @@ build_with_aapt2() {
         echo "No resources compiled for $name"
         return 1
     fi
-    aapt2 link -o "${name}-unsigned.apk" -I android.jar --manifest "$path/AndroidManifest.xml" $flat_files || return 1
+    aapt2 link -o "${name}-unsigned.apk" -I android.jar --manifest "$path/AndroidManifest.xml" $flat_files --auto-add-overlay || return 1
 }
 
 echo "$makes" | while read -r f; do
