@@ -11,9 +11,9 @@ fi
 script_dir="$(dirname "$(readlink -f -- "$0")")"
 if [ "$#" -eq 1 ]; then
     if [ -d "$1" ];then
-	    makes="$(find "$1" -name Android.mk -exec readlink -f -- '{}' \;)"
+        makes="$(find "$1" -name Android.mk -exec readlink -f -- '{}' \;)"
     else
-	    makes="$(readlink -f -- "$1")"
+        makes="$(readlink -f -- "$1")"
     fi
 else
     cd "$script_dir"
@@ -25,8 +25,8 @@ if ! command -v aapt > /dev/null;then
     export PATH=$PATH:.
 fi
 
-if ! command -v aapt > /dev/null && ! command -v aapt2 > /dev/null; then
-    echo "Please install aapt or aapt2 (apt install aapt or aapt2)"
+if ! command -v aapt > /dev/null; then
+    echo "Please install aapt (apt install aapt)"
     exit 1
 fi
 
@@ -80,26 +80,13 @@ build_with_aapt() {
     mkdir -p "$temp_android_data"
     export ANDROID_DATA="$temp_android_data"
     
-    aapt package -f -F "${name}-unsigned.apk" -M "$path/AndroidManifest.xml" -S "$path/res" -I android.jar --auto-add-overlay
+    # Gunakan --auto-add-overlay untuk mengizinkan penambahan resource overlay tanpa <add-resource>
+    aapt package -f -F "${name}-unsigned.apk" -M "$path/AndroidManifest.xml" -S "$path/res" -I android.jar --error-on-missing-config-entry --skip-symbols-without-default-localization
     local ret=$?
     
     rm -rf "$temp_android_data"
     unset ANDROID_DATA
     return $ret
-}
-
-build_with_aapt2() {
-    local name="$1"
-    local path="$2"
-    local temp_dir=$(mktemp -d)
-    trap 'rm -rf "$temp_dir"' RETURN
-    aapt2 compile -o "$temp_dir" --dir "$path/res" || return 1
-    local flat_files=$(find "$temp_dir" -name "*.flat")
-    if [ -z "$flat_files" ]; then
-        echo "No resources compiled for $name"
-        return 1
-    fi
-    aapt2 link -o "${name}-unsigned.apk" -I android.jar --manifest "$path/AndroidManifest.xml" $flat_files --auto-add-overlay || return 1
 }
 
 echo "$makes" | while read -r f; do
@@ -110,10 +97,8 @@ echo "$makes" | while read -r f; do
     
     if build_with_aapt "$name" "$path"; then
         echo "Successfully built with aapt"
-    elif command -v aapt2 > /dev/null && build_with_aapt2 "$name" "$path"; then
-        echo "Successfully built with aapt2"
     else
-        echo "Failed to build $name with both aapt and aapt2"
+        echo "Failed to build $name with aapt"
         exit 1
     fi
     
