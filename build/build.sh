@@ -98,7 +98,8 @@ build_with_aapt() {
         -I android.jar \
         --auto-add-overlay \
         --ignore-assets \
-        --skip-symbols-without-default-localization
+        --skip-symbols-without-default-localization \
+        --error-on-missing-config-entry
 
     local ret=$?
 
