@@ -1,3 +1,4 @@
 PRODUCT_PACKAGES += \
     # product overlay
-	framework-res-multilang
+	framework-res-multilang \
+	Settings-multilang
