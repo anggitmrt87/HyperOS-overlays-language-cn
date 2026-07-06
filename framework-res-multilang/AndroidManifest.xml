@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="android.overlay.framework.res.lang"
+    package="android.overlay.framework.res.multilang"
     android:versionCode="36"
     android:versionName="16">
 
@@ -13,6 +13,6 @@
         android:isStatic="true" />
     
     <application
-        android:label="framework-res-lang"
+        android:label="framework-res-multilang"
         android:extractNativeLibs="false" />
 </manifest>

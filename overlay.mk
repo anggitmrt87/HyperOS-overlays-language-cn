@@ -1,3 +1,3 @@
 PRODUCT_PACKAGES += \
     # product overlay
-	framework-res-lang
+	framework-res-multilang
