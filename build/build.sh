@@ -75,7 +75,34 @@ contains() {
 cleanup_values() {
     local res_dir="$1"
     echo "Cleaning @ references in values files under $res_dir"
-    find "$res_dir/values"* -name "arrays.xml" -type f -exec sed -i '/@/d' {} \;
+    find "$res_dir/values"* -name "arrays.xml" -type f -print0 | while IFS= read -r -d '' file; do
+        awk '
+            BEGIN { in_block=0; block="" }
+            /<array/ || /<string-array/ {
+                in_block=1
+                block=$0
+                next
+            }
+            /<\/array>/ || /<\/string-array>/ {
+                if (in_block) {
+                    block = block "\n" $0
+                    if (block !~ /@/) {
+                        print block
+                    }
+                    in_block=0
+                    block=""
+                    next
+                }
+            }
+            in_block {
+                block = block "\n" $0
+                next
+            }
+            !in_block {
+                print
+            }
+        ' "$file" > "${file}.tmp" && mv "${file}.tmp" "$file"
+    done
 }
 
 build_with_aapt2() {
