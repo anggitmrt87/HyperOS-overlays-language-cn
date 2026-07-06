@@ -10884,7 +10884,7 @@ Disarankan agar Anda menggunakan ^3 yang lebih cepat, atau menggunakan ^4 ini se
     <string name="swipe_direction_ltr">Geser ke kanan untuk menutup, geser ke kiri untuk menampilkan menu</string>
     <string name="swipe_direction_rtl">Geser ke kiri untuk menutup, geser ke kanan untuk menampilkan menu</string>
     <string name="swipe_up_to_continue_using">Geser ke atas untuk terus menggunakan</string>
-    <string name="swipe_up_to_continue_using_summary">%d Secara otomatis mengunci layar jika tidak ada operasi yang dilakukan dalam %d detik</string>
+    <string name="swipe_up_to_continue_using_summary">%1$d Secara otomatis mengunci layar jika tidak ada operasi yang dilakukan dalam %2$d detik</string>
     <string name="swipe_up_to_switch_apps_summary">Geser tombol Beranda ke atas untuk berpindah aplikasi; geser ke atas lagi untuk melihat semua aplikasi; ketuk tombol Kembali untuk kembali ke layar sebelumnya.</string>
     <string name="swipe_up_to_switch_apps_title">Navigasi "dua tombol".</string>
     <string name="switchNetworkToast">Biaya tambahan mungkin berlaku untuk menghubungkan ke jaringan seluler</string>
