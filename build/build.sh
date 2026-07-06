@@ -72,18 +72,37 @@ contains() {
     return 1
 }
 
+cleanup_values() {
+    local res_dir="$1"
+    echo "Cleaning @drawable references in values files under $res_dir"
+    find "$res_dir/values"* -name "*.xml" -type f -exec sed -i '/@drawable/d' {} \;
+}
+
 build_with_aapt() {
     local name="$1"
     local path="$2"
-    
+
     local temp_android_data="$PWD/android_data_$$"
     mkdir -p "$temp_android_data"
     export ANDROID_DATA="$temp_android_data"
-    
-    aapt package -f -F "${name}-unsigned.apk" -M "$path/AndroidManifest.xml" -S "$path/res" -I android.jar --auto-add-overlay --ignore-assets --skip-symbols-without-default-localization
+
+    local temp_res="$PWD/temp_res_$$"
+    mkdir -p "$temp_res"
+    cp -r "$path/res"/* "$temp_res/"
+
+    cleanup_values "$temp_res"
+
+    aapt package -f -F "${name}-unsigned.apk" \
+        -M "$path/AndroidManifest.xml" \
+        -S "$temp_res" \
+        -I android.jar \
+        --auto-add-overlay \
+        --ignore-assets \
+        --skip-symbols-without-default-localization
+
     local ret=$?
-    
-    rm -rf "$temp_android_data"
+
+    rm -rf "$temp_android_data" "$temp_res"
     unset ANDROID_DATA
     return $ret
 }
@@ -93,14 +112,14 @@ echo "$makes" | while read -r f; do
     echo "Generating $name"
 
     path="$(dirname "$f")"
-    
+
     if build_with_aapt "$name" "$path"; then
         echo "Successfully built with aapt"
     else
         echo "Failed to build $name with aapt"
         exit 1
     fi
-    
+
     LD_LIBRARY_PATH=./signapk/ java -jar signapk/signapk.jar keys/platform.x509.pem keys/platform.pk8 "${name}-unsigned.apk" "${name}.apk"
     rm -f "${name}-unsigned.apk"
 
