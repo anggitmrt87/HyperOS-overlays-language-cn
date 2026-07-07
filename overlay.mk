@@ -1,8 +1,8 @@
 PRODUCT_PACKAGES += \
     # product overlay
-    miuisystem-multilang \
     framework-ext-res-multilang \
 	framework-res-multilang \
+	miuisystem-multilang \
 	MiuiSystemUI-multilang \
 	miuix-multilang \
 	Settings-multilang
