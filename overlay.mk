@@ -5,5 +5,6 @@ PRODUCT_PACKAGES += \
 	MIUIPersonalAssistantPhoneOS3-multilang \
 	miuisystem-multilang \
 	MiuiSystemUI-multilang \
+	MIUIWeather-multilang \
 	miuix-multilang \
 	Settings-multilang
