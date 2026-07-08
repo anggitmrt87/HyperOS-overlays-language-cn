@@ -493,7 +493,7 @@ Jika perlu, silakan cek situs resmi ekspedisi terkait"</string>
     <string name="pa_express_provider_banner">Data pengiriman disediakan oleh %s</string>
     <string name="pa_express_provider_cainiao">Cainiao</string>
     <string name="pa_express_provider_jingdong">JD</string>
-    <string name="pa_express_provider_jitu">J&T</string>
+    <string name="pa_express_provider_jitu">J&amp;T</string>
     <string name="pa_express_provider_kuaidi100">Kuaidi100</string>
     <string name="pa_express_provider_miguo">Xiaomi Express</string>
     <string name="pa_express_provider_mimall">Xiaomi Mall</string>
@@ -601,9 +601,9 @@ Jika perlu, silakan cek situs resmi ekspedisi terkait"</string>
     <string name="pa_feature_recomm_category_health">Layanan kesehatan</string>
     <string name="pa_feature_recomm_category_life">Layanan kehidupan</string>
     <string name="pa_feature_recomm_category_travel">Layanan perjalanan</string>
-    <string name="pa_feature_recomm_category_work">Belajar & kerja</string>
+    <string name="pa_feature_recomm_category_work">Belajar &amp; kerja</string>
     <string name="pa_feature_recomm_content_item_festival_desc">Memberikan ucapan di hari-hari penting</string>
-    <string name="pa_feature_recomm_content_item_festival_title">Hari raya & musim</string>
+    <string name="pa_feature_recomm_content_item_festival_title">Hari raya &amp; musim</string>
     <string name="pa_feature_recomm_content_item_news_desc">Berita terkini untuk Anda</string>
     <string name="pa_feature_recomm_content_item_news_title">Berita terpopuler</string>
     <string name="pa_feature_recomm_health_item_medicine_desc">Pengingat dan catatan konsumsi obat tepat waktu</string>
@@ -783,7 +783,7 @@ Jika perlu, silakan cek situs resmi ekspedisi terkait"</string>
     <string name="pa_page_schedule_guide_subtitle">Xiao Ai bantu lacak setiap jadwal, tidak ada yang terlewat</string>
     <string name="pa_page_schedule_guide_title">Pengingat jadwal</string>
     <string name="pa_page_schedule_title">Pengingat jadwal</string>
-    <string name="pa_page_solar_terms_title">Hari raya & musim</string>
+    <string name="pa_page_solar_terms_title">Hari raya &amp; musim</string>
     <string name="pa_page_travel_title">Saran perjalanan</string>
     <string name="pa_page_travel_uses_action_infos_subtitle">Cara perjalanan, alamat rumah dan kantor</string>
     <string name="pa_page_travel_uses_action_infos_title">Atur info perjalanan</string>
@@ -960,12 +960,12 @@ Tambahkan widget"</string>
     <string name="pa_setting_privacy_auth_summary">Rekomendasi aplikasi yang mungkin Anda gunakan</string>
     <string name="pa_setting_privacy_category_perm">Izin terkait</string>
     <string name="pa_setting_privacy_category_priv">Kebijakan privasi</string>
-    <string name="pa_setting_privacy_category_revoke">Tarik persetujuan & keluar layanan</string>
+    <string name="pa_setting_privacy_category_revoke">Tarik persetujuan &amp; keluar layanan</string>
     <string name="pa_setting_privacy_logout">Keluar</string>
     <string name="pa_setting_privacy_logout_dialog_message">Jika Anda keluar dari Asisten Cerdas, Anda tidak dapat melihat info widget di layar paling kiri, menggunakan layanan widget, kami akan berhenti mengumpulkan info pribadi dan menghapusnya sesuai hukum. Yakin keluar?</string>
     <string name="pa_setting_privacy_logout_dialog_title">Keluar dari Asisten Cerdas</string>
     <string name="pa_setting_privacy_logout_summary">Anda akan keluar dari Asisten Cerdas</string>
-    <string name="pa_setting_privacy_perm_desc">Manajemen izin & panduan penggunaan</string>
+    <string name="pa_setting_privacy_perm_desc">Manajemen izin &amp; panduan penggunaan</string>
     <string name="pa_setting_privacy_perm_granted">Diizinkan</string>
     <string name="pa_setting_privacy_perm_install_app">Baca daftar aplikasi</string>
     <string name="pa_setting_privacy_perm_install_app_desc">Rekomendasi widget cerdas</string>
@@ -1001,7 +1001,7 @@ Tambahkan widget"</string>
     <string name="pa_setting_switch_description">Sakelar</string>
     <string name="pa_setting_version">Versi: %1$s</string>
     <string name="pa_shopping_dialog_privacy_authorize_message">Selamat datang di widget Diskon Belanja, Anda dapat melihat info promo produk. Baca dan setujui 《Pernyataan Layanan Pihak Ketiga》 dan 《Kebijakan Privasi》.</string>
-    <string name="pa_shopping_dialog_privacy_authorize_title">Syarat & Privasi</string>
+    <string name="pa_shopping_dialog_privacy_authorize_title">Syarat &amp; Privasi</string>
     <string name="pa_shopping_dialog_privacy_desc">《Kebijakan Privasi》</string>
     <string name="pa_shopping_dialog_privacy_withdraw_message">Jika Anda menarik persetujuan kebijakan privasi widget Diskon Belanja, kami akan berhenti mengumpulkan info pribadi dan menghapusnya sesuai hukum, kecuali peraturan lain mengharuskan penyimpanan. Karena layanan widget Diskon Belanja bergantung pada pengumpulan info pribadi, jika Anda menarik persetujuan, dianggap Anda tidak setuju kami melanjutkan layanan. Tarik persetujuan?</string>
     <string name="pa_shopping_dialog_privacy_withdraw_title">Tarik persetujuan</string>
@@ -1669,7 +1669,7 @@ Ingat absen"</string>
     <string name="pa_widget_schedule_select_description">Konfirmasi</string>
     <string name="pa_widget_schedule_today">Jadwal hari ini</string>
     <string name="pa_widget_select_description">Pilih</string>
-    <string name="pa_widget_solar_terms_title">Hari raya & musim</string>
+    <string name="pa_widget_solar_terms_title">Hari raya &amp; musim</string>
     <string name="pa_widget_travel_card_title">Pengingat perjalanan</string>
     <string name="pa_widget_travel_current">Sekarang</string>
     <string name="pa_widget_travel_edu_subtitle">Aktifkan izin lokasi, Xiao Ai ingatkan lalu lintas pulang-pergi</string>
@@ -1873,7 +1873,7 @@ masukkan kata sandi"</string>
     <string name="send">Kirim</string>
     <string name="solar_term_autumn_begins">Awal Musim Gugur</string>
     <string name="solar_term_autumn_equinox">Ekinoks Musim Gugur</string>
-    <string name="solar_term_clear_and_bright">Cerah & Terang</string>
+    <string name="solar_term_clear_and_bright">Cerah &amp; Terang</string>
     <string name="solar_term_cold_dews">Embun Dingin</string>
     <string name="solar_term_grain_buds">Gandum Kecil</string>
     <string name="solar_term_grain_in_ear">Gandum di Telinga</string>
