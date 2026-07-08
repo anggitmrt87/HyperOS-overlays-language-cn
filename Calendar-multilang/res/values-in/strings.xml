@@ -610,7 +610,7 @@
     <string name="passport_account_crop_user_avatar">Potong foto profil</string>
     <string name="passport_account_empty_user_name">Nama tidak boleh kosong</string>
     <string name="passport_account_error_all_space_user_name">Nama tidak boleh hanya spasi</string>
-    <string name="passport_account_error_invalid_user_name">Nama tidak boleh mengandung <, >, /</string>
+    <string name="passport_account_error_invalid_user_name">Nama tidak boleh mengandung &lt;, >, /</string>
     <string name="passport_account_error_longer_user_name">Nama terlalu panjang, maksimal %d karakter</string>
     <string name="passport_account_error_shorter_user_name">Nama terlalu pendek, minimal %d karakter</string>
     <string name="passport_account_error_user_name">Nama tidak sesuai, coba lagi</string>
@@ -725,7 +725,7 @@
     <string name="passport_register_restricted">Nomor ini terlalu sering mendaftar, coba nomor lain</string>
     <string name="passport_relogin_notice">Kesalahan login, silakan login ulang</string>
     <string name="passport_request_agree">Setuju</string>
-    <string name="passport_request_camera_permission_message">Layanan ini memerlukan izin berikut: <br><br><b>Akses kamera: untuk foto profil</b><br><br>Jika tidak setuju, fungsi ini tidak dapat digunakan. Anda dapat mengubah izin di pengaturan.</string>
+    <string name="passport_request_camera_permission_message">Layanan ini memerlukan izin berikut: &lt;br>&lt;br>&lt;b>Akses kamera: untuk foto profil&lt;/b>&lt;br>&lt;br>Jika tidak setuju, fungsi ini tidak dapat digunakan. Anda dapat mengubah izin di pengaturan.</string>
     <string name="passport_request_cancel">Batal</string>
     <string name="passport_request_error_invalid_token">Otentikasi gagal</string>
     <string name="passport_request_error_network">Jaringan bermasalah</string>
@@ -757,21 +757,21 @@
     <string name="passport_to_verify_code_login">Login dengan nomor</string>
     <string name="passport_unknown_error">Kesalahan tidak diketahui</string>
     <string name="passport_unknown_host_network_error">Kesalahan koneksi jaringan, periksa</string>
-    <string name="passport_user_agreement_hint_3rd_app">Dengan melanjutkan, Anda menyetujui <a href=%1$s>Perjanjian Pengguna</a> <a href=%2$s>Kebijakan Privasi</a> aplikasi ini, serta <a href=%3$s>Perjanjian Pengguna</a> <a href=%4$s>Kebijakan Privasi</a> akun Xiaomi.</string>
-    <string name="passport_user_agreement_hint_3rd_app_mobile">Dengan melanjutkan, Anda menyetujui <a href=%1$s>Perjanjian Pengguna</a> <a href=%2$s>Kebijakan Privasi</a> aplikasi ini, <a href=%3$s>Perjanjian Pengguna</a> <a href=%4$s>Kebijakan Privasi</a> akun Xiaomi, dan <a href=%5$s>Ketentuan Layanan China Mobile</a>.</string>
-    <string name="passport_user_agreement_hint_3rd_app_with_telecom">Dengan melanjutkan, Anda menyetujui <a href=%1$s>Perjanjian Pengguna</a> <a href=%2$s>Kebijakan Privasi</a> aplikasi ini, <a href=%3$s>Perjanjian Pengguna</a> <a href=%4$s>Kebijakan Privasi</a> akun Xiaomi, dan <a href=%5$s>Ketentuan Layanan Tianyi</a>.</string>
-    <string name="passport_user_agreement_hint_3rd_app_with_unicom">Dengan melanjutkan, Anda menyetujui <a href=%1$s>Perjanjian Pengguna</a> <a href=%2$s>Kebijakan Privasi</a> aplikasi ini, <a href=%3$s>Perjanjian Pengguna</a> <a href=%4$s>Kebijakan Privasi</a> akun Xiaomi, dan <a href=%5$s>Ketentuan Layanan China Unicom</a>.</string>
-    <string name="passport_user_agreement_hint_default">Dengan melanjutkan, Anda menyetujui <a href=%1$s>Perjanjian Pengguna</a> <a href=%2$s>Kebijakan Privasi</a> akun Xiaomi.</string>
+    <string name="passport_user_agreement_hint_3rd_app">Dengan melanjutkan, Anda menyetujui &lt;a href=%1$s>Perjanjian Pengguna&lt;/a> &lt;a href=%2$s>Kebijakan Privasi&lt;/a> aplikasi ini, serta &lt;a href=%3$s>Perjanjian Pengguna&lt;/a> &lt;a href=%4$s>Kebijakan Privasi&lt;/a> akun Xiaomi.</string>
+    <string name="passport_user_agreement_hint_3rd_app_mobile">Dengan melanjutkan, Anda menyetujui &lt;a href=%1$s>Perjanjian Pengguna&lt;/a> &lt;a href=%2$s>Kebijakan Privasi&lt;/a> aplikasi ini, &lt;a href=%3$s>Perjanjian Pengguna&lt;/a> &lt;a href=%4$s>Kebijakan Privasi&lt;/a> akun Xiaomi, dan &lt;a href=%5$s>Ketentuan Layanan China Mobile&lt;/a>.</string>
+    <string name="passport_user_agreement_hint_3rd_app_with_telecom">Dengan melanjutkan, Anda menyetujui &lt;a href=%1$s>Perjanjian Pengguna&lt;/a> &lt;a href=%2$s>Kebijakan Privasi&lt;/a> aplikasi ini, &lt;a href=%3$s>Perjanjian Pengguna&lt;/a> &lt;a href=%4$s>Kebijakan Privasi&lt;/a> akun Xiaomi, dan &lt;a href=%5$s>Ketentuan Layanan Tianyi&lt;/a>.</string>
+    <string name="passport_user_agreement_hint_3rd_app_with_unicom">Dengan melanjutkan, Anda menyetujui &lt;a href=%1$s>Perjanjian Pengguna&lt;/a> &lt;a href=%2$s>Kebijakan Privasi&lt;/a> aplikasi ini, &lt;a href=%3$s>Perjanjian Pengguna&lt;/a> &lt;a href=%4$s>Kebijakan Privasi&lt;/a> akun Xiaomi, dan &lt;a href=%5$s>Ketentuan Layanan China Unicom&lt;/a>.</string>
+    <string name="passport_user_agreement_hint_default">Dengan melanjutkan, Anda menyetujui &lt;a href=%1$s>Perjanjian Pengguna&lt;/a> &lt;a href=%2$s>Kebijakan Privasi&lt;/a> akun Xiaomi.</string>
     <string name="passport_user_agreement_hint_first_login">Login pertama akan membuat akun Xiaomi secara otomatis</string>
-    <string name="passport_user_agreement_hint_with_mobile">Dengan melanjutkan, Anda menyetujui <a href=%1$s>Perjanjian Pengguna</a> <a href=%2$s>Kebijakan Privasi</a> akun Xiaomi dan <a href=%3$s>Ketentuan Layanan China Mobile</a>.</string>
-    <string name="passport_user_agreement_hint_with_telecom">Dengan melanjutkan, Anda menyetujui <a href=%1$s>Perjanjian Pengguna</a> <a href=%2$s>Kebijakan Privasi</a> akun Xiaomi dan <a href=%3$s>Ketentuan Layanan Tianyi</a>.</string>
-    <string name="passport_user_agreement_hint_with_unicom">Dengan melanjutkan, Anda menyetujui <a href=%1$s>Perjanjian Pengguna</a> <a href=%2$s>Kebijakan Privasi</a> akun Xiaomi dan <a href=%3$s>Ketentuan Layanan China Unicom</a>.</string>
+    <string name="passport_user_agreement_hint_with_mobile">Dengan melanjutkan, Anda menyetujui &lt;a href=%1$s>Perjanjian Pengguna&lt;/a> &lt;a href=%2$s>Kebijakan Privasi&lt;/a> akun Xiaomi dan &lt;a href=%3$s>Ketentuan Layanan China Mobile&lt;/a>.</string>
+    <string name="passport_user_agreement_hint_with_telecom">Dengan melanjutkan, Anda menyetujui &lt;a href=%1$s>Perjanjian Pengguna&lt;/a> &lt;a href=%2$s>Kebijakan Privasi&lt;/a> akun Xiaomi dan &lt;a href=%3$s>Ketentuan Layanan Tianyi&lt;/a>.</string>
+    <string name="passport_user_agreement_hint_with_unicom">Dengan melanjutkan, Anda menyetujui &lt;a href=%1$s>Perjanjian Pengguna&lt;/a> &lt;a href=%2$s>Kebijakan Privasi&lt;/a> akun Xiaomi dan &lt;a href=%3$s>Ketentuan Layanan China Unicom&lt;/a>.</string>
     <string name="passport_user_avatar_update_title">Atur foto profil</string>
     <string name="passport_user_avatar_uploading">Mengunggah foto...</string>
     <string name="passport_user_id_hint">Email/nomor/ID Xiaomi</string>
     <string name="passport_user_name_phone_number">Nomor</string>
     <string name="passport_user_password_hint">Kata sandi</string>
-    <string name="passport_vcode_what_app_send_prompt">Gunakan nomor <font color=#1F93FF>%s</font> untuk menerima kode WhatsApp</string>
+    <string name="passport_vcode_what_app_send_prompt">Gunakan nomor &lt;font color=#1F93FF>%s&lt;/font> untuk menerima kode WhatsApp</string>
     <string name="passport_wechat_not_install">WeChat tidak terpasang</string>
     <string name="passport_weibo_login_btn_content_description">Login Weibo</string>
     <string name="passport_weixin_login_btn_content_description">Login WeChat</string>
@@ -988,7 +988,7 @@
     <string name="subscribe_channel_subscribing">Berlangganan...</string>
     <string name="subscribe_text">Tambah</string>
     <string name="subscribing_card">Berlangganan</string>
-    <string name="suggestions_and_feedback">Saran & masukan</string>
+    <string name="suggestions_and_feedback">Saran &amp; masukan</string>
     <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
     <string name="summary_import_by_caldav_v1">Dukungan akun CalDav seperti iCloud</string>
     <string name="summary_import_by_dingd_v1">Impor dari DingTalk</string>
@@ -1160,7 +1160,7 @@
     <string name="user_notice_button_exit">Batal</string>
     <string name="user_notice_button_ok">Setuju dan lanjutkan</string>
     <string name="user_notice_message">Kalender memerlukan persetujuan %1$s dan %2$s. Untuk fungsi seperti liburan, hari raya, ulang tahun, dan pengingat perjalanan, diperlukan izin lokasi, jaringan, kontak, dan SMS. Setuju?</string>
-    <string name="user_notice_title">Pernyataan & Ketentuan</string>
+    <string name="user_notice_title">Pernyataan &amp; Ketentuan</string>
     <string name="v7_preference_off">Nonaktif</string>
     <string name="v7_preference_on">Aktif</string>
     <string name="view_event_organizer_label">Penyelenggara:</string>
