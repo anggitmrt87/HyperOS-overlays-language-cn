@@ -1,7 +1,32 @@
 #!/bin/bash
-
 set -e
 
+# ================================================================
+#  FUNGSI LOG DENGAN WARNA & EMOJI
+# ================================================================
+if [ -t 1 ]; then
+    # Warna hanya jika output ke terminal
+    RED='\033[0;31m'
+    GREEN='\033[0;32m'
+    YELLOW='\033[0;33m'
+    BLUE='\033[0;34m'
+    CYAN='\033[0;36m'
+    BOLD='\033[1m'
+    NC='\033[0m' # No Color
+else
+    RED=''; GREEN=''; YELLOW=''; BLUE=''; CYAN=''; BOLD=''; NC=''
+fi
+
+log_info()    { echo -e "${BLUE}ℹ${NC} $1"; }
+log_success() { echo -e "${GREEN}✅${NC} $1"; }
+log_warn()    { echo -e "${YELLOW}⚠️${NC} $1"; }
+log_error()   { echo -e "${RED}❌${NC} $1"; }
+log_step()    { echo -e "${CYAN}▶${NC} $1"; }
+log_header()  { echo -e "\n${BOLD}${CYAN}⏱ [$(date +%H:%M:%S)]${NC} ${BOLD}$1${NC}"; }
+
+# ================================================================
+#  PENANGANAN ARGUMEN --local-aapt
+# ================================================================
 if [ "$1" == "--local-aapt" ];then
     export LD_LIBRARY_PATH=.
     export PATH=.:$PATH
@@ -20,6 +45,9 @@ else
     makes="$(find "$PWD/.." -name Android.mk)"
 fi
 
+# ================================================================
+#  CEK KETERSEDIAAN aapt2
+# ================================================================
 if ! command -v aapt2 > /dev/null;then
     export LD_LIBRARY_PATH=.
     export PATH=$PATH:.
@@ -62,7 +90,7 @@ if [ -f "$overlay_mk" ]; then
         fi
     done < "$overlay_mk"
 else
-    echo "Warning: overlay.mk not found, APKs will stay in build/"
+    log_warn "overlay.mk tidak ditemukan, APK akan tetap di build/"
 fi
 
 contains() {
@@ -74,7 +102,7 @@ contains() {
 
 cleanup_values() {
     local res_dir="$1"
-    echo "Cleaning @ references in values files under $res_dir"
+    log_info "Membersihkan referensi @ di file values di $res_dir"
     find "$res_dir/values"* -name "arrays.xml" -type f -print0 | while IFS= read -r -d '' file; do
         awk '
             BEGIN { in_block=0; block="" }
@@ -122,12 +150,12 @@ build_with_aapt2() {
     local compiled_dir="$PWD/compiled_$$"
     mkdir -p "$compiled_dir"
 
-    echo "Compiling resources with aapt2..."
+    echo "   🛠  Mengompilasi resource dengan aapt2..."
     find "$temp_res" -type f -print0 | while IFS= read -r -d '' file; do
         aapt2 compile -o "$compiled_dir" "$file" || return 1
     done
 
-    echo "Linking resources with aapt2..."
+    echo "   🔗 Melakukan linking..."
     aapt2 link -o "${name}-unsigned.apk" \
         -I android.jar \
         --manifest "$path/AndroidManifest.xml" \
@@ -142,22 +170,56 @@ build_with_aapt2() {
     return $ret
 }
 
-echo "$makes" | while read -r f; do
-    name="$(sed -nE 's/LOCAL_PACKAGE_NAME.*:\=\s*(.*)/\1/p' "$f")"
-    echo "Generating $name"
+# ================================================================
+#  MAIN LOOP DENGAN OUTPUT KEREN
+# ================================================================
+log_header "Memulai proses build overlay"
 
+# Kumpulkan daftar file Android.mk ke dalam array
+mapfile -t make_files <<< "$makes"
+total_files=${#make_files[@]}
+
+if [ "$total_files" -eq 0 ]; then
+    log_error "Tidak ditemukan file Android.mk"
+    exit 1
+fi
+
+log_info "Ditemukan $total_files file Android.mk:"
+for f in "${make_files[@]}"; do
+    echo "   • $f"
+done
+
+# Variabel untuk statistik
+total_success=0
+total_fail=0
+start_time=$(date +%s)
+
+counter=1
+for f in "${make_files[@]}"; do
+    name="$(sed -nE 's/LOCAL_PACKAGE_NAME.*:\=\s*(.*)/\1/p' "$f")"
     path="$(dirname "$f")"
 
+    log_header "[$counter/$total_files] Membangun $name"
+    log_info "📂 Sumber: $path"
+
+    build_start=$(date +%s)
     if build_with_aapt2 "$name" "$path"; then
-        echo "Successfully built with aapt2"
+        build_end=$(date +%s)
+        duration=$((build_end - build_start))
+        log_success "Berhasil! (waktu: ${duration}s)"
+        total_success=$((total_success + 1))
     else
-        echo "Failed to build $name with aapt2"
+        log_error "Gagal membangun $name"
+        total_fail=$((total_fail + 1))
         exit 1
     fi
 
+    # Tanda tangani APK
+    log_info "✍️  Menandatangani APK..."
     LD_LIBRARY_PATH=./signapk/ java -jar signapk/signapk.jar keys/platform.x509.pem keys/platform.pk8 "${name}-unsigned.apk" "${name}.apk"
     rm -f "${name}-unsigned.apk"
 
+    # Pindahkan ke direktori tujuan
     if [ -f "$overlay_mk" ]; then
         if contains "$name" "${product_packages[@]}"; then
             target_dir="$root_dir/product/overlay"
@@ -166,8 +228,26 @@ echo "$makes" | while read -r f; do
         else
             target_dir="$root_dir/build"
         fi
-        mkdir -p "$target_dir"
-        mv "${name}.apk" "$target_dir/"
-        echo "Moved ${name}.apk to $target_dir"
+    else
+        target_dir="$root_dir/build"
     fi
+
+    mkdir -p "$target_dir"
+    mv "${name}.apk" "$target_dir/"
+    log_success "📂 Dipindahkan ke $target_dir/${name}.apk"
+
+    counter=$((counter + 1))
 done
+
+# ================================================================
+#  RINGKASAN AKHIR
+# ================================================================
+end_time=$(date +%s)
+total_duration=$((end_time - start_time))
+
+echo -e "\n────────────────────────────────────────────────"
+echo -e "${BOLD}🏁  Selesai!${NC}"
+echo -e "   ${GREEN}✅ Berhasil:${NC} $total_success"
+echo -e "   ${RED}❌ Gagal  :${NC} $total_fail"
+echo -e "   ⏱ Total waktu: ${total_duration} detik"
+echo -e "────────────────────────────────────────────────"
