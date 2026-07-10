@@ -8,6 +8,7 @@ PRODUCT_PACKAGES += \
 	MIUIContacts-multilang \
 	MiuiMms-multilang \
 	MIUIPersonalAssistantPhoneOS3-multilang \
+	MIUISecurityCenter-multilang \
 	miuisystem-multilang \
 	MiuiSystemUI-multilang \
 	MIUIWeather-multilang \
