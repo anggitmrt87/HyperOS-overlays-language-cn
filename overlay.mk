@@ -4,6 +4,7 @@ PRODUCT_PACKAGES += \
     framework-ext-res-multilang \
 	framework-res-multilang \
 	InCallUI-multilang \
+	MISettings-multilang \
 	MIUIContacts-multilang \
 	MiuiMms-multilang \
 	MIUIPersonalAssistantPhoneOS3-multilang \
