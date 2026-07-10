@@ -1,0 +1,18 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="android.overlay.miuimms.multilang"
+    android:versionCode="36"
+    android:versionName="16">
+
+    <uses-sdk
+        android:minSdkVersion="30"
+        android:targetSdkVersion="36" />
+
+    <overlay
+        android:targetPackage="com.android.mms"
+        android:priority="999"
+        android:isStatic="true" />
+    
+    <application
+        android:label="MiuiMms-multilang"
+        android:extractNativeLibs="false" />
+</manifest>

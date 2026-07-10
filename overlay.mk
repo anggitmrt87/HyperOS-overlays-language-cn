@@ -5,6 +5,7 @@ PRODUCT_PACKAGES += \
 	framework-res-multilang \
 	InCallUI-multilang \
 	MIUIContacts-multilang \
+	MiuiMms-multilang \
 	MIUIPersonalAssistantPhoneOS3-multilang \
 	miuisystem-multilang \
 	MiuiSystemUI-multilang \
