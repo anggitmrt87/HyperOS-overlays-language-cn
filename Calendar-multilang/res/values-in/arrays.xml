@@ -3,7 +3,7 @@
     <string-array name="account_sync_frequency">
         <item>Manual</item>
         <item>Setiap %d menit</item>
-        <item>Setiap 1 jam</item>
+        <item>Setiap jam</item>
         <item>Setiap %d jam</item>
         <item>Setiap %d jam</item>
     </string-array>
@@ -25,69 +25,25 @@
     </string-array>
     <string-array name="change_response_labels">
         <item>Hanya acara ini</item>
-        <item>Semua acara berulang</item>
+        <item>Seluruh acara di seri ini</item>
     </string-array>
     <string-array name="close_alarm_repeating_labels">
-        <item>Matikan sekali saja</item>
-        <item>Selalu matikan mulai sekarang</item>
-    </string-array>
-    <string-array name="constellation_array">
-        <item>Tidak ada</item>
-        <item>Aries</item>
-        <item>Taurus</item>
-        <item>Gemini</item>
-        <item>Cancer</item>
-        <item>Leo</item>
-        <item>Virgo</item>
-        <item>Libra</item>
-        <item>Scorpio</item>
-        <item>Sagittarius</item>
-        <item>Capricorn</item>
-        <item>Aquarius</item>
-        <item>Pisces</item>
-    </string-array>
-    <string-array name="constellation_date_array">
-        <item></item>
-        <item>21 Mar - 19 Apr</item>
-        <item>20 Apr - 20 Mei</item>
-        <item>21 Mei - 21 Jun</item>
-        <item>22 Jun - 22 Jul</item>
-        <item>23 Jul - 22 Agt</item>
-        <item>23 Agt - 22 Sep</item>
-        <item>23 Sep - 23 Okt</item>
-        <item>24 Okt - 22 Nov</item>
-        <item>23 Nov - 21 Des</item>
-        <item>22 Des - 19 Jan</item>
-        <item>20 Jan - 18 Feb</item>
-        <item>19 Feb - 20 Mar</item>
+        <item>Hanya untuk kali ini</item>
+        <item>Matikan pengingat berulang</item>
     </string-array>
     <string-array name="date_calculate_spinner">
-        <item>Maju</item>
-        <item>Mundur</item>
+        <item>Ke depan</item>
+        <item>Ke belakang</item>
     </string-array>
     <string-array name="delete_repeating_labels">
         <item>Hanya acara ini</item>
-        <item>Acara ini dan acara mendatang</item>
-        <item>Semua acara</item>
+        <item>Acara ini dan yang akan datang</item>
+        <item>Seluruh acara</item>
     </string-array>
     <string-array name="gemini_info">
         <item>gemini</item>
         <item>Gemini</item>
     </string-array>
-    <array name="horoscope_info_arrays">
-        <item>@array/aries_info</item>
-        <item>@array/taurus_info</item>
-        <item>@array/gemini_info</item>
-        <item>@array/cancer_info</item>
-        <item>@array/leo_info</item>
-        <item>@array/virgo_info</item>
-        <item>@array/libra_info</item>
-        <item>@array/scorpio_info</item>
-        <item>@array/sagittarius_info</item>
-        <item>@array/capricorn_info</item>
-        <item>@array/aquarius_info</item>
-        <item>@array/pisces_info</item>
-    </array>
     <string-array name="leo_info">
         <item>leo</item>
         <item>Leo</item>
@@ -98,17 +54,31 @@
     </string-array>
     <string-array name="locale_calendar_array">
         <item>Tidak ada</item>
-        <item>Kalender Lunar Tiongkok</item>
+        <item>Kalender China</item>
         <item>Kalender Hijriah</item>
-        <item>Kalender Ibrani</item>
+        <item>Kalender Hebrew</item>
         <item>Kalender Jepang</item>
         <item>Kalender Persia</item>
         <item>Kalender India</item>
         <item>Kalender Buddha</item>
     </string-array>
+    <string-array name="months_English_array">
+        <item>Januari</item>
+        <item>Februari</item>
+        <item>Maret</item>
+        <item>April</item>
+        <item>Mei</item>
+        <item>Juni</item>
+        <item>Juli</item>
+        <item>Agustus</item>
+        <item>September</item>
+        <item>Oktober</item>
+        <item>November</item>
+        <item>Desember</item>
+    </string-array>
     <string-array name="open_alarm_repeating_labels">
-        <item>Nyalakan sekali saja</item>
-        <item>Selalu nyalakan mulai sekarang</item>
+        <item>Hanya untuk kali ini</item>
+        <item>Setel pengingat berulang</item>
     </string-array>
     <string-array name="passport_account_user_gender_name">
         <item>Pria</item>
@@ -119,9 +89,9 @@
         <item>Pisces</item>
     </string-array>
     <string-array name="prefEntries_alerts_popup_new">
-        <item>Tidak digunakan</item>
-        <item>Terapkan ke semua agenda</item>
-        <item>Terapkan ke agenda dengan waktu pasti</item>
+        <item>Mati</item>
+        <item>Untuk seluruh acara</item>
+        <item>Untuk acara peka waktu</item>
     </string-array>
     <string-array name="prefEntries_alerts_popup_new_summary">
         <item></item>
@@ -130,11 +100,11 @@
     </string-array>
     <string-array name="prefEntries_alerts_vibrateWhen">
         <item>Selalu</item>
-        <item>Hanya saat senyap</item>
+        <item>Hanya saat dering diheningkan</item>
         <item>Tidak pernah</item>
     </string-array>
     <string-array name="preferences_week_start_day_labels">
-        <item>Pengaturan default lokal</item>
+        <item>Standar daerah</item>
         <item>Sabtu</item>
         <item>Minggu</item>
         <item>Senin</item>
@@ -173,55 +143,55 @@
         <item>31</item>
     </string-array>
     <string-array name="repeat_choose_end">
-        <item>Tidak pernah</item>
+        <item>Jangan</item>
         <item>Waktu</item>
         <item>Jumlah</item>
     </string-array>
     <string-array name="repeat_choose_month">
-        <item>Januari</item>
-        <item>Februari</item>
-        <item>Maret</item>
-        <item>April</item>
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
         <item>Mei</item>
-        <item>Juni</item>
-        <item>Juli</item>
-        <item>Agustus</item>
-        <item>September</item>
-        <item>Oktober</item>
-        <item>November</item>
-        <item>Desember</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Ags</item>
+        <item>Sep</item>
+        <item>Okt</item>
+        <item>Nov</item>
+        <item>Des</item>
     </string-array>
     <string-array name="repeat_choose_week_left">
-        <item>Pertama</item>
-        <item>Kedua</item>
-        <item>Ketiga</item>
-        <item>Keempat</item>
-        <item>Terakhir</item>
+        <item>pertama</item>
+        <item>kedua</item>
+        <item>ketiga</item>
+        <item>keempat</item>
+        <item>terakhir</item>
     </string-array>
     <string-array name="repeat_choose_week_right">
-        <item>Senin-Jumat</item>
+        <item>Sen-Jum</item>
         <item>Akhir pekan</item>
-        <item>Seminggu penuh</item>
+        <item>Seminggu</item>
     </string-array>
     <string-array name="repeat_choose_weekday">
-        <item>Senin</item>
-        <item>Selasa</item>
-        <item>Rabu</item>
-        <item>Kamis</item>
-        <item>Jumat</item>
-        <item>Sabtu</item>
-        <item>Minggu</item>
+        <item>Sen</item>
+        <item>Sel</item>
+        <item>Rab</item>
+        <item>Kam</item>
+        <item>Jum</item>
+        <item>Sab</item>
+        <item>Min</item>
     </string-array>
     <string-array name="repeat_countdown">
-        <item>Tidak pernah</item>
-        <item>Setiap bulan</item>
-        <item>Setiap tahun</item>
+        <item>Jangan</item>
+        <item>Tiap bulan</item>
+        <item>Tiap tahun</item>
     </string-array>
     <string-array name="repeat_frequency_spinner">
-        <item>Hari</item>
-        <item>Minggu</item>
-        <item>Bulan</item>
-        <item>Tahun</item>
+        <item>hari</item>
+        <item>minggu</item>
+        <item>bulan</item>
+        <item>tahun</item>
     </string-array>
     <string-array name="repeat_monthly_on_day_count_values">
         <item>Senin pertama</item>
@@ -267,14 +237,14 @@
         <item>Tidak</item>
     </string-array>
     <string-array name="response_labels2">
-        <item>Tidak ada respons</item>
+        <item>Jangan respons</item>
         <item>Terima</item>
-        <item>Tunda</item>
+        <item>Putuskan nanti</item>
         <item>Tolak</item>
     </string-array>
     <string-array name="sagittarius_info">
-        <item>sagittarius</item>
-        <item>Sagittarius</item>
+        <item>sagitarius</item>
+        <item>Sagitarius</item>
     </string-array>
     <string-array name="scorpio_info">
         <item>scorpio</item>
@@ -286,7 +256,7 @@
     </string-array>
     <string-array name="timezone_labels_v3">
         <item>Kepulauan Marshall</item>
-        <item>Midway</item>
+        <item>Pulau Midway</item>
         <item>Hawaii</item>
         <item>Alaska</item>
         <item>Waktu Pasifik</item>
@@ -295,7 +265,7 @@
         <item>Chihuahua</item>
         <item>Waktu Pegunungan</item>
         <item>Amerika Tengah</item>
-        <item>Waktu Standar Tengah</item>
+        <item>Waktu Tengah</item>
         <item>Kota Meksiko</item>
         <item>Saskatchewan</item>
         <item>Bogota</item>
@@ -310,7 +280,7 @@
         <item>Buenos Aires</item>
         <item>Greenland</item>
         <item>Montevideo</item>
-        <item>Atlantik Tengah</item>
+        <item>Mid-Atlantik</item>
         <item>Azores</item>
         <item>Tanjung Verde</item>
         <item>Casablanca</item>
@@ -319,7 +289,7 @@
         <item>Amsterdam</item>
         <item>Berlin</item>
         <item>Belgrade</item>
-        <item>Brussels</item>
+        <item>Brussel</item>
         <item>Sarajevo</item>
         <item>Windhoek</item>
         <item>Waktu Afrika Barat</item>
@@ -333,7 +303,7 @@
         <item>Minsk</item>
         <item>Harare</item>
         <item>Baghdad</item>
-        <item>Moskwa</item>
+        <item>Moskow</item>
         <item>Kuwait</item>
         <item>Nairobi</item>
         <item>Tehran</item>
@@ -343,7 +313,7 @@
         <item>Dubai</item>
         <item>Kabul</item>
         <item>Karachi</item>
-        <item>Uralsk</item>
+        <item>"Ural'sk"</item>
         <item>Yekaterinburg</item>
         <item>Kolkata</item>
         <item>Sri Lanka</item>
@@ -382,6 +352,15 @@
         <item>Virgo</item>
     </string-array>
     <string-array name="week_header_name">
+        <item>MIN</item>
+        <item>SEN</item>
+        <item>SEL</item>
+        <item>RAB</item>
+        <item>KAM</item>
+        <item>JUM</item>
+        <item>SAB</item>
+    </string-array>
+    <string-array name="week_header_name_phone_landscape">
         <item>Min</item>
         <item>Sen</item>
         <item>Sel</item>
@@ -390,26 +369,17 @@
         <item>Jum</item>
         <item>Sab</item>
     </string-array>
-    <string-array name="week_header_name_phone_landscape">
-        <item>Minggu</item>
-        <item>Senin</item>
-        <item>Selasa</item>
-        <item>Rabu</item>
-        <item>Kamis</item>
-        <item>Jumat</item>
-        <item>Sabtu</item>
-    </string-array>
     <string-array name="widget_style_list">
-        <item>Hitam transparan</item>
+        <item>Transparan</item>
         <item>Latar belakang putih</item>
     </string-array>
     <string-array name="year_view_week_header_name">
-        <item>Sen</item>
-        <item>Sel</item>
-        <item>Rab</item>
-        <item>Kam</item>
-        <item>Jum</item>
-        <item>Sab</item>
-        <item>Min</item>
+        <item>M</item>
+        <item>S</item>
+        <item>S</item>
+        <item>R</item>
+        <item>K</item>
+        <item>J</item>
+        <item>S</item>
     </string-array>
 </resources>
