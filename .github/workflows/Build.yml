@@ -23,7 +23,7 @@ jobs:
         bash build.sh
 
     - name: Upload APK
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         path: |
           product/overlay/*.apk
