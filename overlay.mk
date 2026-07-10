@@ -13,4 +13,5 @@ PRODUCT_PACKAGES += \
 	MiuiSystemUI-multilang \
 	MIUIWeather-multilang \
 	miuix-multilang \
-	Settings-multilang
+	Settings-multilang \
+	TeleService-multilang
