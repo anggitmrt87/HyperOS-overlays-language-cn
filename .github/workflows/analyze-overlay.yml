@@ -1,0 +1,52 @@
+# .github/workflows/analyze-overlay.yml
+name: Analyze and Build Overlay Resources
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Android SDK and aapt2
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget unzip
+          wget -q https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip
+          unzip -q commandlinetools-linux-*.zip -d android-sdk
+          export ANDROID_SDK_ROOT=$PWD/android-sdk
+          yes | $ANDROID_SDK_ROOT/cmdline-tools/bin/sdkmanager --licenses > /dev/null 2>&1 || true
+          $ANDROID_SDK_ROOT/cmdline-tools/bin/sdkmanager "build-tools;34.0.0" > /dev/null 2>&1
+          echo "$ANDROID_SDK_ROOT/build-tools/34.0.0" >> $GITHUB_PATH
+
+      - name: Run XML analysis on all overlay res directories
+        run: |
+          DIRS=$(find . -type d -name "res" | grep -v "^./res$" | sed 's/^\.\///' | tr '\n' ' ')
+          if [ -z "$DIRS" ]; then
+            echo "No overlay res directories found. Using default ./res"
+            python .github/scripts/analyze_overlay.py res
+          else
+            echo "Found overlay directories: $DIRS"
+            python .github/scripts/analyze_overlay.py $DIRS
+          fi
+
+      - name: Validate overlay resources with aapt2 compile
+        run: |
+          mkdir -p compiled
+          for resdir in $(find . -type d -name "res" | grep -v "^./res$"); do
+            echo "Compiling resources in $resdir"
+            find $resdir -type f \( -name "*.xml" -o -name "*.png" -o -name "*.jpg" \) -exec aapt2 compile -o compiled/ {} \;
+          done
+          echo "✅ aapt2 compile completed (if no errors)"

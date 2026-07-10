@@ -1,0 +1,30 @@
+# .github/dependabot.yml
+version: 2
+updates:
+  # Untuk dependensi Gradle (jika ada build.gradle)
+  - package-ecosystem: "gradle"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "android"
+
+  # Untuk GitHub Actions (workflow itu sendiri)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "ci"
+
+  # (Opsional) jika ada npm di masa depan
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "javascript"
