@@ -3,6 +3,7 @@ PRODUCT_PACKAGES += \
     Calendar-multilang \
     framework-ext-res-multilang \
 	framework-res-multilang \
+	InCallUI-multilang \
 	MIUIPersonalAssistantPhoneOS3-multilang \
 	miuisystem-multilang \
 	MiuiSystemUI-multilang \
