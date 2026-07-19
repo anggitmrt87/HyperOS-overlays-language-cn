@@ -11,6 +11,7 @@ PRODUCT_PACKAGES += \
 	MIUISecurityCenter-multilang \
 	miuisystem-multilang \
 	MiuiSystemUI-multilang \
+	MIUIThemeManager-multilang \
 	MIUIWeather-multilang \
 	miuix-multilang \
 	Settings-multilang \
