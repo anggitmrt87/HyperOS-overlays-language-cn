@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="app_info_permission_count">
+        <item quantity="other">%1$s izin</item>
+    </plurals>
+    <plurals name="app_info_permission_count_">
+        <item quantity="other">Menggunakan %1$s izin,</item>
+    </plurals>
+    <plurals name="app_info_private_permission_count">
+        <item quantity="other">%1$s terkait privasi</item>
+    </plurals>
+    <plurals name="comment_count">
+        <item quantity="other">%1$s komentar</item>
+    </plurals>
+    <plurals name="input_text_count_limit_talkback_one">
+        <item quantity="other">%1$d karakter telah dimasukkan</item>
+    </plurals>
+    <plurals name="input_text_count_limit_talkback_two">
+        <item quantity="other">Maksimal %1$d karakter</item>
+    </plurals>
+    <plurals name="miuix_appcompat_items_selected">
+        <item quantity="other">%d item dipilih</item>
+        <item quantity="one">%d item dipilih</item>
+    </plurals>
+    <plurals name="miuix_indexer_selected">
+        <item quantity="other">%1$d dipilih</item>
+    </plurals>
+    <plurals name="password_wrong_retry_msg">
+        <item quantity="other">Terlalu banyak percobaan buka kunci gagal, silakan coba lagi dalam %1$S detik</item>
+    </plurals>
+    <plurals name="pure_mode_guard_day">
+        <item quantity="other">Telah melindungi Anda %1$d hari</item>
+    </plurals>
+    <plurals name="settings_security_mode_enable_count">
+        <item quantity="other">Telah diaktifkan oleh &lt;font color=#0D84FF>%1$s&lt;/font> orang</item>
+    </plurals>
+    <plurals name="settings_security_mode_protect_count">
+        <item quantity="other">Perlindungan Keamanan telah menghalangi &lt;font color=#0D84FF>%1$s&lt;/font> kali risiko untuk Anda</item>
+    </plurals>
+    <plurals name="settings_security_mode_protect_days">
+        <item quantity="other">Telah melindungi Anda &lt;font color=#0D84FF>%1$s&lt;/font> hari</item>
+    </plurals>
+    <plurals name="settings_security_mode_title_on_msg">
+        <item quantity="other">Telah melindungi Anda %1$s hari</item>
+    </plurals>
+</resources>
